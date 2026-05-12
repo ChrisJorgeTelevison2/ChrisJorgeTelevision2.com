@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChrisJorgeTelevision2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>ChrisJorgeTelevision2</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Channels</a>
+        <a href="#">Categories</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Watch Your Favorite Channels Live!</h2>
+</section>
+
+<section class="channels">
+    <h2 class="section-title">Featured Channels</h2>
+    <div class="channel-grid">
+        <div class="channel" onclick="openModal('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')">
+            <img src="https://via.placeholder.com/300x150?text=Channel+1" alt="Channel 1">
+            <p>Channel 1</p>
+        </div>
+        <div class="channel" onclick="openModal('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8')">
+            <img src="https://via.placeholder.com/300x150?text=Channel+2" alt="Channel 2">
+            <p>Channel 2</p>
+        </div>
+        <div class="channel" onclick="openModal('https://test-streams.mux.dev/test_001/stream.m3u8')">
+            <img src="https://via.placeholder.com/300x150?text=Channel+3" alt="Channel 3">
+            <p>Channel 3</p>
+        </div>
+        <div class="channel" onclick="openModal('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8')">
+            <img src="https://via.placeholder.com/300x150?text=Channel+4" alt="Channel 4">
+            <p>Channel 4</p>
+        </div>
+    </div>
+</section>
+
+<section class="categories">
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="category-grid">
+        <div class="category">
+            <img src="https://via.placeholder.com/300x150?text=Sports" alt="Sports">
+            <p>Sports</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/300x150?text=News" alt="News">
+            <p>News</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/300x150?text=Movies" alt="Movies">
+            <p>Movies</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/300x150?text=Kids" alt="Kids">
+            <p>Kids</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 ChrisJorgeTelevision2. All Rights Reserved.
+</footer>
+
+<!-- Modal -->
+<div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+</div>
+
+<script>
+    function openModal(src) {
+        document.getElementById('videoModal').style.display = 'flex';
+        const video = document.getElementById('modalVideo');
+        video.src = src;
+        video.play();
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('modalVideo');
+        video.pause();
+        video.src = '';
+        modal.style.display = 'none';
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
