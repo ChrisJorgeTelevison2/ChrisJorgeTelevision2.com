@@ -31,34 +31,67 @@
 
 <!-- CHANNELS -->
 <div class="section">
-<div class="row">
-
-<a class="card usa" href="#">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/ABC7_New_York_logo.png" alt="USA Channel">
-</a>
-
-<a class="card latino" href="https://chrisjorgetelevison2.blogspot.com/p/ecuavisa.html">
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Ecuavisa_Logo_2019.png" alt="Latino Channel">
-</a>
-
-<a class="card kids" href="#">
-<img src="https://1000logos.net/wp-content/uploads/2021/08/Nick-Jr.-Logo.png" alt="Nick Jr">
-</a>
-
-<a class="card kids" href="#">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Nickelodeon_2023_logo.svg" alt="Nickelodeon">
-</a>
-
-<a class="card sports" href="#">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXBgI9iAqwDgOHz_o14OLBn0BTGoXeErVg5GbkrV-zuVdLzQv2D7gqw8xaKVMNgoQgergOTYEUcPbbEfFXMSd9yilTPXLE0yEjmBLYODbyj_-P8o0mwEmQrbUmIfvQlZiLhIhUKtKQhGER-OfSY7xDjEekuxtD1-lUTqySBIEpcFot5VNpjNwIQ1j1sFmX/s1080/ChrisJorgeSportsTV.png" alt="Sports Channel">
-</a>
-
+<div class="row" id="channel-row">
+  <!-- Channels will be injected here by JavaScript -->
 </div>
 </div>
 
 <script>
+// === CHANNEL LIST ===
+// Just add your channels here: name, category, image URL, and link
+const channels = [
+  {
+    name: "ABC7 New York",
+    category: "usa",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/ABC7_New_York_logo.png",
+    link: "#"
+  },
+  {
+    name: "Ecuavisa",
+    category: "latino",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Ecuavisa_Logo_2019.png",
+    link: "https://chrisjorgetelevison2.blogspot.com/p/ecuavisa.html"
+  },
+  {
+    name: "Nick Jr",
+    category: "kids",
+    image: "https://1000logos.net/wp-content/uploads/2021/08/Nick-Jr.-Logo.png",
+    link: "#"
+  },
+  {
+    name: "Nickelodeon",
+    category: "kids",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Nickelodeon_2023_logo.svg",
+    link: "#"
+  },
+  {
+    name: "Sports TV",
+    category: "sports",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXBgI9iAqwDgOHz_o14OLBn0BTGoXeErVg5GbkrV-zuVdLzQv2D7gqw8xaKVMNgoQgergOTYEUcPbbEfFXMSd9yilTPXLE0yEjmBLYODbyj_-P8o0mwEmQrbUmIfvQlZiLhIhUKtKQhGER-OfSY7xDjEekuxtD1-lUTqySBIEpcFot5VNpjNwIQ1j1sFmX/s1080/ChrisJorgeSportsTV.png",
+    link: "#"
+  }
+];
+
+// === GENERATE CHANNEL CARDS ===
+const row = document.getElementById("channel-row");
+
+channels.forEach(channel => {
+  const a = document.createElement("a");
+  a.href = channel.link;
+  a.className = `card ${channel.category}`;
+  a.title = channel.name;
+
+  const img = document.createElement("img");
+  img.src = channel.image;
+  img.alt = channel.name;
+
+  a.appendChild(img);
+  row.appendChild(a);
+});
+
+// === FILTER FUNCTION ===
 function filter(category, el){
-  let cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.card');
   cards.forEach(card=>{
     if(category === 'all'){
       card.classList.remove('hidden');
