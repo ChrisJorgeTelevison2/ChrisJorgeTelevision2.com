@@ -32,13 +32,12 @@
 <!-- CHANNELS -->
 <div class="section">
 <div class="row" id="channel-row">
-  <!-- Channels will be injected here by JavaScript -->
+  <!-- Channels are generated here by JavaScript -->
 </div>
 </div>
 
 <script>
 // === CHANNEL LIST ===
-// Just add your channels here: name, category, image URL, and link
 const channels = [
   {
     name: "ABC7 New York",
@@ -74,7 +73,6 @@ const channels = [
 
 // === GENERATE CHANNEL CARDS ===
 const row = document.getElementById("channel-row");
-
 channels.forEach(channel => {
   const a = document.createElement("a");
   a.href = channel.link;
