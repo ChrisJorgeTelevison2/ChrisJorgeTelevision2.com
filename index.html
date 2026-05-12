@@ -4,112 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ChrisJorgeTelevision2</title>
-<style>
-body .main-inner {
-  padding:0 !important;
-  max-width:100% !important;
-}
-body{
-  margin:0;
-  font-family:'Segoe UI', Arial;
-  background:linear-gradient(to bottom,#0b0f1a,#05070d);
-  color:white;
-}
 
-/* HERO */
-.hero{
-  height:60vh;
-  background:
-  linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
-  url('https://images.unsplash.com/photo-1601944177325-f8867652837f?q=80&w=1470') center/cover;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:50px 25px;
-}
-.hero h1{font-size:38px}
-.hero p{margin-top:10px;font-size:18px;}
+<!-- Favicon -->
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a1/TV_icon.png" type="image/png">
 
-/* DISCORD BUTTON */
-.button {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#7289da;
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-}
-.button:hover{
-  background:#5b6eae;
-}
-
-/* CATEGORY BAR */
-.categories{
-  display:flex;
-  gap:12px;
-  padding:15px;
-  overflow-x:auto;
-}
-.cat-btn{
-  padding:10px 18px;
-  border-radius:20px;
-  background:#111;
-  cursor:pointer;
-  transition:.3s;
-  white-space:nowrap;
-  border:1px solid rgba(255,255,255,0.1);
-}
-.cat-btn:hover{
-  background:#1f80e0;
-}
-.cat-btn.active{
-  background:#1f80e0;
-}
-
-/* SECTION */
-.section{padding:20px}
-.row{
-  display:flex;
-  gap:15px;
-  overflow-x:auto;
-}
-
-/* CARD */
-.card{
-  min-width:160px;
-  border-radius:12px;
-  overflow:hidden;
-  transition:.3s;
-  cursor:pointer;
-}
-.card img{width:100%}
-.card:hover{
-  transform:scale(1.1);
-}
-
-/* HIDE */
-.hidden{
-  display:none;
-}
-
-/* SCROLLBAR STYLING */
-.row::-webkit-scrollbar, .categories::-webkit-scrollbar{
-  height:8px;
-}
-.row::-webkit-scrollbar-thumb, .categories::-webkit-scrollbar-thumb{
-  background: rgba(255,255,255,0.2);
-  border-radius:4px;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  .hero h1{font-size:28px;}
-  .hero p{font-size:16px;}
-}
-</style>
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -133,25 +33,22 @@ body{
 <div class="section">
 <div class="row">
 
-<!-- USA -->
 <a class="card usa" href="#">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/ABC7_New_York_logo.png" alt="USA Channel">
 </a>
 
-<!-- LATINO -->
 <a class="card latino" href="#">
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Ecuavisa_Logo_2019.png" alt="Latino Channel">
 </a>
 
-<!-- KIDS -->
 <a class="card kids" href="#">
 <img src="https://1000logos.net/wp-content/uploads/2021/08/Nick-Jr.-Logo.png" alt="Nick Jr">
 </a>
+
 <a class="card kids" href="#">
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Nickelodeon_2023_logo.svg" alt="Nickelodeon">
 </a>
 
-<!-- SPORTS -->
 <a class="card sports" href="#">
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXBgI9iAqwDgOHz_o14OLBn0BTGoXeErVg5GbkrV-zuVdLzQv2D7gqw8xaKVMNgoQgergOTYEUcPbbEfFXMSd9yilTPXLE0yEjmBLYODbyj_-P8o0mwEmQrbUmIfvQlZiLhIhUKtKQhGER-OfSY7xDjEekuxtD1-lUTqySBIEpcFot5VNpjNwIQ1j1sFmX/s1080/ChrisJorgeSportsTV.png" alt="Sports Channel">
 </a>
@@ -173,13 +70,10 @@ function filter(category, el){
       }
     }
   });
-
-  // active button
   document.querySelectorAll('.cat-btn').forEach(btn=>btn.classList.remove('active'));
   el.classList.add('active');
 }
 </script>
 
 </body>
-</html>
 </html>
