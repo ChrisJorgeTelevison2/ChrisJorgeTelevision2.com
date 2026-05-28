@@ -6,10 +6,11 @@
 
   <title>Watch ESPN Live</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitiodXit0S2qejfaGHb2-FHcKKdEawYrSS-k6dTW-7k0EWRcgf-EOTeJyr0Fmg2yjKv23ihCq04XngbxhO4c_7IBSMZxyougJDLP-C81TNII2Zskrbv2SuPV45477RckgKBwrG4l9lYnF28WEfVAEkEsdhhvg6OybhkcM7bAjS55Pi_CkBnnITDekl12le/s16/favicon.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitiodXit0S2qejfaGHb2-FHcKKdEawYrSS-k6dTW-7k0EWRcgf-EOTeJyr0Fmg2yjKv23ihCq04XngbxhO4c_7IBSMZxyougJDLP-C81TNII2Zskrbv2SuPV45477RckgKBwrG4l9lYnF28WEfVAEkEsdhhvg6OybhkcM7bAjS55Pi_CkBnnITDekl12le/s16/favicon.png">
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -24,8 +25,7 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background:
-      radial-gradient(circle at top left,#1e293b,#0f172a 60%);
+      background: radial-gradient(circle at top left,#1e293b,#0f172a 60%);
       color:white;
       min-height:100vh;
       padding:30px 15px;
@@ -36,20 +36,18 @@
       margin:auto;
     }
 
-    /* HEADER */
-
     .hero{
       text-align:center;
       margin-bottom:35px;
     }
 
     .logo{
-      width:85px;
-      height:85px;
-      border-radius:20px;
-      margin-bottom:15px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
-      border:3px solid rgba(255,255,255,0.1);
+      width:90px;
+      height:90px;
+      border-radius:24px;
+      margin-bottom:18px;
+      border:3px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 35px rgba(0,0,0,0.45);
     }
 
     .hero h1{
@@ -66,36 +64,32 @@
       font-size:1rem;
     }
 
-    /* DISCORD BUTTON */
-
     .discord-btn{
       display:inline-flex;
       align-items:center;
       gap:10px;
       margin-top:25px;
       padding:15px 28px;
-      background:linear-gradient(135deg,#5865F2,#404EED);
-      color:white;
-      text-decoration:none;
       border-radius:50px;
+      text-decoration:none;
+      color:white;
       font-weight:600;
+      background:linear-gradient(135deg,#5865F2,#404EED);
       box-shadow:0 10px 25px rgba(88,101,242,0.4);
-      transition:0.3s ease;
+      transition:.3s ease;
     }
 
     .discord-btn:hover{
       transform:translateY(-3px) scale(1.03);
-      box-shadow:0 15px 35px rgba(88,101,242,0.6);
+      box-shadow:0 15px 35px rgba(88,101,242,0.65);
     }
 
-    /* PLAYER CARD */
-
     .player-card{
-      background:rgba(255,255,255,0.06);
+      background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(14px);
       border-radius:24px;
       overflow:hidden;
+      backdrop-filter:blur(14px);
       box-shadow:0 20px 50px rgba(0,0,0,0.45);
     }
 
@@ -115,40 +109,39 @@
     }
 
     /* WATERMARK */
-
     .watermark{
       position:absolute;
-      top:15px;
-      right:15px;
-      background:rgba(0,0,0,0.55);
+      top:18px;
+      right:18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
       padding:10px 18px;
-      border-radius:14px;
-      backdrop-filter:blur(8px);
-      z-index:10;
+      border-radius:16px;
+      background:rgba(15,23,42,0.72);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(12px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.35);
+      z-index:20;
+      font-size:14px;
       font-weight:600;
-      letter-spacing:1px;
-      border:1px solid rgba(255,255,255,0.1);
-      box-shadow:0 5px 15px rgba(0,0,0,0.35);
+      letter-spacing:.5px;
     }
 
     .live-dot{
       width:10px;
       height:10px;
-      background:#ff2d2d;
       border-radius:50%;
-      display:inline-block;
-      margin-right:8px;
-      box-shadow:0 0 10px #ff2d2d;
-      animation:pulse 1.2s infinite;
+      background:#ff2d55;
+      box-shadow:0 0 8px #ff2d55;
+      animation:pulse 1.4s infinite;
     }
 
     @keyframes pulse{
-      0%{transform:scale(1);}
-      50%{transform:scale(1.4);}
-      100%{transform:scale(1);}
+      0%{transform:scale(1);opacity:1;}
+      50%{transform:scale(1.4);opacity:.7;}
+      100%{transform:scale(1);opacity:1;}
     }
-
-    /* INFO */
 
     .channel-info{
       padding:30px;
@@ -159,7 +152,7 @@
       background:linear-gradient(135deg,#ff0000,#ff5e00);
       padding:7px 15px;
       border-radius:999px;
-      font-size:0.75rem;
+      font-size:.75rem;
       font-weight:600;
       letter-spacing:1px;
       margin-bottom:15px;
@@ -175,13 +168,11 @@
       color:#d1d5db;
     }
 
-    /* SHARE */
-
     .share-box{
       margin-top:30px;
       padding:20px;
-      background:rgba(255,255,255,0.04);
       border-radius:18px;
+      background:rgba(255,255,255,0.04);
       border:1px solid rgba(255,255,255,0.08);
     }
 
@@ -189,121 +180,85 @@
       margin-bottom:15px;
     }
 
-    /* FOOTER */
-
     footer{
       margin-top:40px;
       text-align:center;
       color:#94a3b8;
-      font-size:0.9rem;
+      font-size:.9rem;
     }
 
-    /* MOBILE */
-
     @media(max-width:768px){
-
-      .hero h1{
-        font-size:2rem;
-      }
-
-      .channel-info{
-        padding:20px;
-      }
-
-      .channel-info h2{
-        font-size:1.5rem;
-      }
-
-      .watermark{
-        font-size:12px;
-        padding:8px 12px;
-      }
+      .hero h1{font-size:2rem;}
+      .channel-info{padding:20px;}
+      .channel-info h2{font-size:1.5rem;}
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
+  <!-- HERO -->
+  <section class="hero">
 
-    <section class="hero">
+    <img
+      class="logo"
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKKulybluDSRDdbHlu3Wc0-pBUdoznxSJzbThCPXjLp6tMGIKhjFtL_2Vm1ozc9NyRHjSoHedrAIrkbUNwhkS-0t90L858KWuIE9O23sM_40quv_AdvEw9A9Xk0aUgo64hW2obj509C50QGnpvaAT3yJVra6r4Gd5a2tGyCddzaxvDk5wpPU8NLYm7wLA/s320/ChrisJorgeTelevison2-icon.png"
+      alt="logo">
 
-      <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitiodXit0S2qejfaGHb2-FHcKKdEawYrSS-k6dTW-7k0EWRcgf-EOTeJyr0Fmg2yjKv23ihCq04XngbxhO4c_7IBSMZxyougJDLP-C81TNII2Zskrbv2SuPV45477RckgKBwrG4l9lYnF28WEfVAEkEsdhhvg6OybhkcM7bAjS55Pi_CkBnnITDekl12le/s16/favicon.png"
-        class="logo"
-        alt="Logo">
+    <h1>Watch ESPN Live</h1>
+    <p>Live sports, highlights, and nonstop action.</p>
 
-      <h1>Watch ESPN Live</h1>
+    <a class="discord-btn" href="https://discord.gg/kEVcZrGF">
+      🎮 Join Our Discord Server
+    </a>
 
-      <p>
-        Live sports, highlights, and nonstop action.
-      </p>
+  </section>
 
-      <a href="https://discord.gg/kEVcZrGF" class="discord-btn">
-        🎮 Join Our Discord Server
-      </a>
+  <!-- PLAYER -->
+  <div class="player-card">
 
-    </section>
+    <div class="video-container">
 
-    <!-- PLAYER -->
-
-    <div class="player-card">
-
-      <div class="video-container">
-
-        <!-- WATERMARK -->
-
-        <div class="watermark">
-          <span class="live-dot"></span>
-          ChrisJorgeTelevison2
-        </div>
-
-        <!-- VIDEO -->
-
-        <iframe
-          allowfullscreen
-          allow="autoplay"
-          src="https://anym3u8player.com/ultimate-player-generator/player.php?player=clappr&url=https%3A%2F%2Fcors.globetv.app%2Fhttp%3A%2F%2F181.118.153.15%3A8000%2Fplay%2Fnk34%2Findex.m3u8&controls=true">
-        </iframe>
-
+      <!-- WATERMARK -->
+      <div class="watermark">
+        <span class="live-dot"></span>
+        ChrisJorgeTelevison2
       </div>
 
-      <!-- INFO -->
+      <iframe
+        allowfullscreen
+        allow="autoplay"
+        src="https://anym3u8player.com/ultimate-player-generator/player.php?player=clappr&url=https%3A%2F%2Fcors.globetv.app%2Fhttp%3A%2F%2F181.118.153.15%3A8000%2Fplay%2Fnk34%2Findex.m3u8&controls=true">
+      </iframe>
 
-      <div class="channel-info">
+    </div>
 
-        <span class="badge">LIVE CHANNEL</span>
+    <!-- INFO -->
+    <div class="channel-info">
 
-        <h2>ESPN</h2>
+      <span class="badge">LIVE CHANNEL</span>
 
-        <p>
-          ESPN is one of the world’s leading sports networks,
-          broadcasting football, basketball, baseball, UFC,
-          motorsports, tennis, and more across Latin America
-          and worldwide.
-        </p>
+      <h2>ESPN</h2>
 
-        <!-- SHARE -->
+      <p>
+        ESPN is one of the world’s leading sports networks, broadcasting football, basketball, baseball, UFC, motorsports, tennis, and more worldwide.
+      </p>
 
-        <div class="share-box">
+      <div class="share-box">
+        <h3>Share this stream</h3>
 
-          <h3>Share this stream</h3>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style"
+          data-a2a-title="Watch ESPN Live"
+          data-a2a-url="https://chrisjorgetelevison2.github.io/ChrisJorgeTelevision2.com/espn1.html">
 
-          <div
-            class="a2a_kit a2a_kit_size_32 a2a_default_style"
-            data-a2a-title="Watch ESPN Live"
-            data-a2a-url="https://chrisjorgetelevison2.github.io/ChrisJorgeTelevision2.com/espn1.html">
-
-            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_x"></a>
-            <a class="a2a_button_whatsapp"></a>
-            <a class="a2a_button_email"></a>
-            <a class="a2a_button_copy_link"></a>
-
-          </div>
+          <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <a class="a2a_button_facebook"></a>
+          <a class="a2a_button_x"></a>
+          <a class="a2a_button_whatsapp"></a>
+          <a class="a2a_button_email"></a>
+          <a class="a2a_button_copy_link"></a>
 
         </div>
 
@@ -311,15 +266,15 @@
 
     </div>
 
-    <footer>
-      © 2026 ChrisJorgeTelevision2 • All Rights Reserved
-    </footer>
-
   </div>
 
-  <!-- SHARE SCRIPT -->
+  <footer>
+    © 2026 ChrisJorgeTelevison2 • All Rights Reserved
+  </footer>
 
-  <script defer src="https://static.addtoany.com/menu/page.js"></script>
+</div>
+
+<script defer src="https://static.addtoany.com/menu/page.js"></script>
 
 </body>
 </html>
